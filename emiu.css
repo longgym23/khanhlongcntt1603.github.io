@@ -1,0 +1,108 @@
+h1{
+
+	color:rgb(238, 150, 34);
+}
+body, html {
+
+	margin: 0;
+	padding: 0;
+
+}
+
+body {
+
+	background: url(./img/nen.png);
+	background-size: cover;
+	background-position: bottom;
+	
+}
+
+.box-news{
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+	width: 100%;
+	height: auto;
+}
+.box-news-items{
+	width: 97%;
+	height: 200px;
+	border: 1px solid gray;
+	box-shadow: 5px 2px gainsboro;
+	margin: 5px 10px;
+	border-radius: 10px;
+}
+.box-news-items img{
+	width: 170px;
+	height: 190px;
+	margin: 5px;
+	float: left;
+	margin: 5px;
+	border: 1px solid gray;
+	box-shadow: 2px 1px gray;
+	border-radius: 5px;
+}
+.news-content{
+	width: 450px;
+	height: 190px;
+	float: left;
+}
+.title-news{
+	margin: 0;
+	border-bottom: 1px dotted gray;
+}
+.title-news a{
+	text-decoration: none;
+	color:rgb(199, 24, 33);
+}
+.title-news a:hover{
+	text-decoration: underline;
+}
+.text-content{
+	text-align: justify;
+}
+
+  .gioithieu1{
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 01.6;
+    display: block;
+    font-family: 'Serif';
+    width: 100%;
+  }
+  hr {
+    width: 80%;
+    margin: 0 auto;
+}
+
+/* ảnh */
+.image-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .image-wrapper {
+    width: calc(33.33% - 2px);
+    border: 1px solid black;
+    box-sizing: border-box;
+  }
+  
+  .image-wrapper img {
+    display: block;
+    width: 263px;
+    height: 180px;
+    margin: 1px 133px 1px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .image-wrapper img:hover {
+    transform: scale(1.1);
+    opacity: 0.7;
+    cursor: pointer;
+  }
+  .gioithieu1{
+    margin: 40px;
+  }
+  iframe{
+    margin-left: 40px;
+  }

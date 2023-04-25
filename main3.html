@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="emiu.css">
+    <style type="text/css">
+        /* Định dạng background */
+
+
+        /* Định dạng hiệu ứng */
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+
+        /* Định dạng hạt */
+        .particle {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 4px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.8);
+            -webkit-animation: particle 2s ease-in-out;
+            animation: particle 2s ease-in-out;
+            cursor: pointer;
+        }
+
+
+
+        /* Khai báo keyframes cho animation */
+        @-webkit-keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translateY(-100%);
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+
+            10%,
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translateY(200%);
+                transform: translateY(200%);
+                opacity: 0;
+            }
+        }
+        
+
+        @keyframes particle {
+            0% {
+                -webkit-transform: translate(0, 0);
+                transform: translate(0, 0);
+                opacity: 1;
+            }
+
+            100% {
+                -webkit-transform: translate(100vw, 100vh);
+                transform: translate(100vw, 100vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div id="particles"></div>
+    <!-- Nội dung trang web của bạn ở đây -->
+
+    <script type="text/javascript">
+        // Tạo các hạt ngẫu nhiên
+function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+        }
+
+        // Tạo hạt mới sau mỗi 0.1ms
+        setInterval(createParticle, 50);
+
+        /* Hàm tạo màu sắc ngẫu nhiên */
+        function randomColor() {
+            var colors = ['#FF6138', '#FFFF9D', '#BEEB9F', '#79BD8F', '#00A388']
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+
+        /* Tạo các hạt ngẫu nhiên */
+        function createParticle() {
+            var particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.top = Math.random() * window.innerHeight + 'px';
+            particle.style.left = Math.random() * window.innerWidth + 'px';
+            particle.style.background = randomColor();
+            document.getElementById('particles').appendChild(particle);
+            setTimeout(function () {
+                particle.remove();
+            }, 4000);
+
+        }
+
+        const border = document.querySelector('.border');
+
+        function toggleBorder() {
+            border.classList.toggle('active');
+        }
+
+        setInterval(toggleBorder, 5000);
+    </script>
+    <!--viem-->
+    <div class="border"></div>
+    </head>
+
+    <body text="#FF6633">
+        <div id="main">
+
+            <div class="header">
+                <h1><table cellpadding="2px" cellSpacing="2px" with="700px" height="140px" align="center" border="1px">
+                    <tr >
+                       <th rowspan="2">THÀNH PHỐ HẢI DƯƠNG<br>
+                                    Nơi Chôn Rau Cắt Rốn
+                    </th>
+                    </tr>
+                </table>
+            </h1>
+            <div class="box-news">
+                <div class="box-news-items"><img src="https://liontrip.vn/wp-content/uploads/2022/09/Du-li%CC%A3ch-Ha%CC%89i-Du%CC%9Bo%CC%9Bng-Du-li%CC%A3ch-Lion-Trip.png" alt="" title="Hải Dương Tôi Ơi">
+                    <div class="new-content">
+                        <h3 class="title-news"><a href="https://liontrip.vn/que-huong-banh-dau-xanh-dia-diem-du-lich-hai-duong-co-gi/">Giới thiệu đôi nét về Hải Dương </h3></a>
+                        <hr width="50%" align="center">
+                        <p class="text-content">Hải Dương là một trong những khu vực trung tâm kinh tế, giáo dục, y tế của miền Bắc. Nơi đây các thủ đô Hà Nội chỉ gần 60km nên có hệ thống giao thông vô cùng thuận tiện. Đến Hải Dương, du khách không chỉ được tham quan những danh lam thắng cảnh nổi tiếng lâu đời như đền Côn Sơn – Kiếp Bạc, Hồ Bạch Đằng,… mà còn được check-in nhiều địa điểm du lịch hấp dẫn.
+                            </p>
+                    </div>
+                </div>
+            
+            </div>
+            <hr>
+            <div class="box-news">
+                <div class="box-news-items"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/94/Hai_Duong_in_Vietnam.svg/300px-Hai_Duong_in_Vietnam.svg.png" alt="" title="Lịch Sử Hình Thành Của TP Hải Dương">
+                    <div class="new-content">
+                        <h3 class="title-news"><a href="https://nguoikesu.com/dia-danh/tinh-hai-duong">Lịch Sử Hình Thành Của Thành Phố Hải Dương </h3></a>
+                        <hr width="50%" align="center">
+                        <p class="text-content">Xuất xứ tên gọi Hải Dương: Hải là biển. Dương là ánh sáng, ánh mặt trời. Hải Dương nằm ở phía đông kinh thành Thăng Long. Hướng Đông cũng là hướng mặt trời mọc. Vì vậy Hải Dương có nghĩa là "ánh mặt trời biển Đông" hay "ánh sáng từ miền duyên hải (phía đông) chiếu về". Tên gọi Hải Dương chính thức có từ năm 1469 3 . Thời phong kiến, Hải Dương là một miền đất rất rộng lớn. phía tây đến Bần Yên Nhân (nay thuộc tỉnh Hưng Yên), phía đông đến vùng biển (nay thuộc thành phố Hải Phòng), phía nam từ Lực Điền đến cầu Tràng (nay thuộc tỉnh Hưng Yên), phía bắc từ Trạm Điền xuống núi Tam Ban, Yên Tử (nay thuộc tỉnh Quảng Ninh). Miền đất Hải Dương luôn ở vị trí chiến lược trong sự nghiệp xây dựng và bảo vệ Tổ quốc. Trong "Dư địa chí", Nguyễn Trãi đã đánh giá Hải Dương là trấn thứ nhất trong bốn kinh trấn và là phên giậu phía đông của kinh thành Thăng Long.
+
+                            Đời Hùng Vương xưa, Hải Dương là bộ Dương Tuyền; thời nhà Tần thuộc Tượng quận. Thời nhà Hán thuộc quận Giao Chỉ; thời nhà Đông Ngô thuộc Giao Châu; nhà Đường đặt Hải Môn trấn, sau đổi thành Hồng Châu.
+                            Nhà Đinh chia làm đạo, vẫn mang tên là Hồng Châu; nhà Tiền Lê cũng theo như nhà Đinh.
+                            Nhà Lý đổi thành lộ Hồng, sau đổi thành lộ Hải Đông.
+                            Nhà Trần đổi lại thành lộ Hồng, rồi lại đổi thành lộ Hải Đông. Sau đó đổi làm 4 lộ: Hồng Châu thượng, Hồng Châu hạ và Nam Sách thượng, Nam Sách hạ, còn gọi là Nam Sách Giang.
+                            </p>
+                    </div>
+                </div>
+            
+            </div>
+            <hr>
+            <div class="content">
+                <p class="gioithieu1">Các địa điểm du lịch Hải Dương bạn nên ghé thăm một lần trong đời!</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                      <a href="https://liontrip.vn/que-huong-banh-dau-xanh-dia-diem-du-lich-hai-duong-co-gi/"><img src="https://liontrip.vn/wp-content/uploads/2022/09/Chu%CC%80a-Co%CC%82n-So%CC%9Bn.png" alt="Côn Sơn Kiếp Bạc" title="Côn Sơn Kiếp Bạc"></a>
+                    </div>
+                    <div class="image-wrapper">
+                      <a href="https://liontrip.vn/que-huong-banh-dau-xanh-dia-diem-du-lich-hai-duong-co-gi/"><img src="https://liontrip.vn/wp-content/uploads/2022/09/de%CC%82%CC%80n-cao-an-phu%CC%A3.png" alt="Đền An Phụ" title="Đền An Phụ"></a>
+                    </div>
+                    <div class="image-wrapper">
+                      <a href="https://liontrip.vn/que-huong-banh-dau-xanh-dia-diem-du-lich-hai-duong-co-gi/"><img src="https://liontrip.vn/wp-content/uploads/2022/09/de%CC%82%CC%80n-tho%CC%9B%CC%80-Chu-Va%CC%86n-An.png" alt="Đền Thờ Chu Văn An" title="Đền Thờ Chu Văn An"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1"> Lễ Hội</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <a href="https://luhanhvietnam.com.vn/du-lich/nhung-le-hoi-o-hai-duong-doc-dao-thu-vi.html"><img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/06_2019/le-hoi-o-hai-duong-1.jpg" alt="Lễ Hội Côn Sơn- Kiếp Bạc" title="Lễ Hội Côn Sơn- Kiếp Bạc"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://luhanhvietnam.com.vn/du-lich/nhung-le-hoi-o-hai-duong-doc-dao-thu-vi.html"><img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/06_2019/le-hoi-o-hai-duong-2-compressed.jpg" alt="Lễ Hội Chùa Muống" title="Lễ Hội Chùa Muống"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://luhanhvietnam.com.vn/du-lich/nhung-le-hoi-o-hai-duong-doc-dao-thu-vi.html"><img src="https://luhanhvietnam.com.vn/du-lich/vnt_upload/news/06_2019/le-hoi-o-hai-duong-3.jpg" alt="Lễ Hội Đền Sượt" title="Lễ Hội Đền Sượt"></a>
+                    </div>
+                  </div>
+            </div>
+
+
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1">Phố Phường</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <a href="https://tinbds.com/hai-duong/nam-sach/xa-hop-tien"><img src="https://tinbds.com/images/place/0/g58.jpg" alt="Image 1" title="Đình Đầu Xã Hợp Tiến"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://moit.gov.vn/tu-hao-hang-viet-nam/vai-thieu-thanh-ha-qua-ngot-vuon-xa.html"><img src="https://thanhnienmoi.com/upload/images/du-lich-tham-quan-vuon-vai-o-thanh-ha-hai-duong-01.jpg" alt="Image 2" title="Vườn vải thiều ở huyện Thanh Hà"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://haiduong.gov.vn/Trang/ChiTietTinTuc.aspx?nid=13066"><img src="https://haiduong.gov.vn/HinhAnhBaiViet/Den%20Nguyen%20Trai.jpg" alt="Image 2" title="Đền Kiếp Bạc thuộc khu di tích"></a>
+                    </div>
+                  </div>
+            </div>
+
+
+            <br><br><br><br>
+
+            <div class="content">
+                <p class="gioithieu1">Ẩm Thực</p>
+                <div class="image-container">
+                    <div class="image-wrapper">
+                        <a href="https://www.traveloka.com/vi-vn/explore/culinary/dac-san-hai-duong/164150"><img src="https://ik.imagekit.io/tvlk/blog/2022/09/dac-san-hai-duong-2.jpg?tr=dpr-2,w-675" alt="Image 1" title="Bánh Đậu Xanh"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://www.traveloka.com/vi-vn/explore/culinary/dac-san-hai-duong/164150"><img src="https://ik.imagekit.io/tvlk/blog/2022/09/dac-san-hai-duong-4.jpeg?tr=dpr-2,w-675" alt="Image 1" title="Bánh Lòng Kinh Môn"></a>
+                    </div>
+                    <div class="image-wrapper">
+                        <a href="https://www.traveloka.com/vi-vn/explore/culinary/dac-san-hai-duong/164150"><img src="https://ik.imagekit.io/tvlk/blog/2022/09/dac-san-hai-duong-5.jpg?tr=dpr-2,w-675" alt="Image 1" title="Bánh Đúc Đậu"></a>
+                    </div>
+                  </div>
+            </div>
+
+            <hr>
+            <br><br><br><br>
+            <div class="footer">
+                <p class="gioithieu1">Nếu muốn biết thêm về Hải Dương thì hãy xem video sau đây nhé! </p>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/n9CoJxuxLu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+        </div>
+    <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+</body>
+
+</html>
